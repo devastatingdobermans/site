@@ -1,164 +1,74 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 	<head>
+		<title>Louie is the Best Dog!!!</title>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Blood Sea Logbook | Fan Website</title>
 		<style>
-			:root {
-				--bg-1: #090303;
-				--bg-2: #220303;
-				--text: #f3dbdb;
-				--muted: #c09b9b;
-				--danger: #ff3f3f;
-				--panel: #140707;
-				--panel-border: #542020;
-			}
-
-			* {
-				box-sizing: border-box;
+			html,
+			body {
+				height: 100%;
+				margin: 0;
 			}
 
 			body {
+				background: #f6f1e8;
+				color: #1f1a17;
+				font-family: Georgia, "Times New Roman", serif;
+			}
+
+			.page {
+				box-sizing: border-box;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				height: 100vh;
+				padding: 16px;
+			}
+
+			figure {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				gap: 12px;
+				width: 100%;
+				height: 100%;
 				margin: 0;
-				font-family: "Trebuchet MS", "Segoe UI", sans-serif;
-				color: var(--text);
-				background: radial-gradient(circle at top, #3c0808 0%, var(--bg-2) 35%, var(--bg-1) 100%);
-				min-height: 100vh;
 			}
 
-			.wrap {
-				max-width: 980px;
-				margin: 0 auto;
-				padding: 24px 16px 56px;
+			.image-frame {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				flex: 1 1 auto;
+				min-height: 0;
+				width: 100%;
 			}
 
-			.hero {
-				padding: 22px;
-				border: 1px solid var(--panel-border);
-				background: linear-gradient(160deg, #1d0909, #100606);
-				border-radius: 14px;
-				box-shadow: 0 12px 28px rgba(0, 0, 0, 0.45);
+			img {
+				max-width: 100%;
+				max-height: 100%;
+				width: 100%;
+				height: 100%;
+				object-fit: contain;
 			}
 
-			h1 {
-				margin: 0 0 8px;
-				font-size: clamp(1.8rem, 3vw, 2.7rem);
-				letter-spacing: 0.06em;
-			}
-
-			.sub {
-				color: var(--muted);
-				margin: 0;
-				line-height: 1.5;
-			}
-
-			.grid {
-				margin-top: 20px;
-				display: grid;
-				gap: 14px;
-				grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
-			}
-
-			.card {
-				background: var(--panel);
-				border: 1px solid var(--panel-border);
-				padding: 14px;
-				border-radius: 12px;
-			}
-
-			h2 {
-				margin-top: 0;
-				font-size: 1.05rem;
-				letter-spacing: 0.05em;
-				color: #ffb1b1;
-			}
-
-			.sonar {
-				margin-top: 22px;
-				padding: 18px;
-				border-radius: 12px;
-				border: 1px solid var(--panel-border);
-				background: #0f0606;
-			}
-
-			button {
-				background: #b11a1a;
-				color: white;
-				border: 0;
-				border-radius: 10px;
-				padding: 10px 14px;
-				font-size: 1rem;
-				cursor: pointer;
-				font-weight: 700;
-			}
-
-			button:hover {
-				filter: brightness(1.1);
-			}
-
-			#ping-status {
-				margin-top: 10px;
-				color: #ffd5d5;
-				font-family: Consolas, monospace;
-			}
-
-			footer {
-				margin-top: 24px;
-				color: var(--muted);
-				font-size: 0.92rem;
+			figcaption {
+				flex: 0 0 auto;
+				text-align: center;
+				font-size: clamp(1.2rem, 2vw, 2rem);
+				line-height: 1.2;
 			}
 		</style>
 	</head>
 	<body>
-		<main class="wrap">
-			<section class="hero">
-				<h1>Blood Sea Logbook</h1>
-				<p class="sub">
-					A fan website inspired by submarine horror vibes. This project is made for learning HTML, CSS, and JavaScript.
-				</p>
-			</section>
-
-			<section class="grid">
-				<article class="card">
-					<h2>Mission</h2>
-					<p>Navigate through a red ocean, survive, and collect photo evidence.</p>
-				</article>
-				<article class="card">
-					<h2>Submarine Rules</h2>
-					<p>Conserve oxygen and power. Panic decisions usually make things worse.</p>
-				</article>
-				<article class="card">
-					<h2>Best Skill</h2>
-					<p>Staying calm under pressure beats speed every time.</p>
-				</article>
-			</section>
-
-			<section class="sonar">
-				<h2>Sonar Console</h2>
-				<button id="ping-btn" type="button">Send Sonar Ping</button>
-				<p id="ping-status">System ready...</p>
-			</section>
-
-			<footer>
-				<p>Fan-made educational page. Not affiliated with any official game studio.</p>
-			</footer>
+		<main class="page">
+			<figure>
+				<div class="image-frame">
+					<img src="louie.jpg" alt="Louie" />
+				</div>
+				<figcaption>Louie is the best dog --- Chris.</figcaption>
+			</figure>
 		</main>
-
-		<script>
-			const messages = [
-				"Ping sent... distant metal creak detected.",
-				"Ping sent... unknown movement at bearing 042.",
-				"Ping sent... no contact. For now.",
-				"Ping sent... pressure rising below safe depth.",
-				"Ping sent... faint structure detected nearby."
-			];
-
-			document.getElementById("ping-btn").addEventListener("click", function () {
-				const random = Math.floor(Math.random() * messages.length);
-				const now = new Date().toLocaleTimeString();
-				document.getElementById("ping-status").textContent = now + " | " + messages[random];
-			});
-		</script>
 	</body>
 </html>
