@@ -37,3 +37,11 @@ input,textarea { background:#ff1493; border-color:#ffd700; color:#ffd700; }
 .hero .button-light { color:#ffd700; border-color:#ffd700; }
 .site-menu summary { background:#ff1493; border:1px solid #ffd700; color:#ffd700; }
 input::placeholder,textarea::placeholder { color:#ffd700; opacity:.85; }
+:root { --gold:#a66a00; --gold-light:#ffd1e5; --paper:#ffd1e5; --line:#d994b5; --ink:#a66a00; }
+body,.site-header,.site-menu nav,.feature-card,.panel,.price-card,.gallery-card,footer { background:#ffd1e5; color:#a66a00; }
+.hero { background:radial-gradient(ellipse at top,#ffeaf4,transparent 65%),#f6b9d3; }
+.button,.button-light,.site-menu summary { background:#ffd1e5; border-color:#a66a00; color:#a66a00; }
+.button:hover,.button-light:hover,.site-menu nav a:hover,.site-menu nav a[aria-current="page"] { background:#f6b9d3; color:#a66a00; }
+input,textarea { background:#ffd1e5; border-color:#a66a00; color:#a66a00; }
+.gallery-card img { background:#ffd1e5; }
+.eyebrow,.text-link,.gallery-card p,input::placeholder,textarea::placeholder,.hero .button-light { color:#a66a00; border-color:#a66a00; }
