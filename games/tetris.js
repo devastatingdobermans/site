@@ -126,11 +126,5 @@
   });
   function away(){if(mode==='running'&&(document.hidden||location.hash!=='#games'||el('tetris-game').hidden))pause();}
   document.addEventListener('visibilitychange',away);window.addEventListener('hashchange',away);window.addEventListener('gamechange',away);
-  document.querySelectorAll('[data-game]').forEach(button=>button.addEventListener('click',()=>{
-    const selected=button.dataset.game;
-    document.querySelectorAll('#games > article').forEach(game=>game.hidden=game.id!==selected+'-game');
-    document.querySelectorAll('[data-game]').forEach(tab=>tab.setAttribute('aria-pressed',String(tab.dataset.game===selected)));
-    window.dispatchEvent(new Event('gamechange'));
-  }));
   sync();draw();requestAnimationFrame(frame);
 })();

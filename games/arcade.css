@@ -1,0 +1,18 @@
+.arcade-intro { margin:-12px 0 24px; color:#665143; line-height:1.6; }
+.arcade-library { margin-bottom:28px; padding:18px; border:1px solid #c8b69a; border-radius:14px; background:#fffaf2; }
+.arcade-library summary { cursor:pointer; font:bold 1.1rem Georgia,serif; color:#60352d; }
+.arcade-search { display:grid; gap:8px; margin:16px 0; font:700 .9rem Arial,sans-serif; }
+.arcade-search input { width:100%; box-sizing:border-box; padding:12px 14px; border:1px solid #b89b78; border-radius:8px; font:1rem Arial,sans-serif; background:#fff; color:#38291e; }
+.arcade-library .game-picker { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:8px; max-height:300px; overflow:auto; margin:0; padding:4px; }
+.arcade-library .game-picker button { min-width:0; padding:12px 8px; font-size:.9rem; line-height:1.35; }
+.arcade-now { font:.9rem Arial,sans-serif; margin:16px 0 0; color:#665143; }
+.arcade-field { border:2px solid #b89b78; border-radius:14px; overflow:hidden; background:#f7efdc; }
+.arcade-field canvas { display:block; width:100%; height:auto; touch-action:none; }
+.arcade-field canvas:focus-visible { outline:3px solid #a25c2e; outline-offset:-4px; }
+.arcade-status { min-height:1.6em; line-height:1.6; }
+.arcade-controls { display:flex; flex-wrap:wrap; gap:8px; margin-top:14px; }
+.arcade-controls button { min-height:48px; min-width:52px; padding:12px 18px; border:2px solid #b89b78; border-radius:10px; background:#fff5de; color:#422a25; font:bold 1rem Arial,sans-serif; cursor:pointer; touch-action:none; user-select:none; -webkit-user-select:none; }
+.arcade-controls button:disabled { opacity:.45; cursor:default; }.arcade-controls button:not(:disabled):active { background:#e1bc7c; }.arcade-controls button:focus-visible { outline:3px solid #a25c2e; outline-offset:3px; }
+@media(max-width:650px){.arcade-library .game-picker{grid-template-columns:repeat(2,minmax(0,1fr));max-height:260px;}.arcade-library{padding:12px;}.arcade-controls{gap:6px;}.arcade-controls button{padding:12px;flex:1 0 auto;} }
+
+@media(max-width:400px){.arcade-library .game-picker button{font-size:.85rem;padding:11px 6px;}.arcade-controls button{font-size:.95rem;}.arcade-intro{font-size:.95rem;}}

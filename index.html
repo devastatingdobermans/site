@@ -142,7 +142,7 @@
 <link rel="stylesheet" href="games/tetris.css">
 <link rel="stylesheet" href="games/snake.css">
 <link rel="stylesheet" href="games/adventure.css">
-<link rel="stylesheet" href="site-brand.css"><link rel="icon" type="image/png" href="images/doberman-logo.png"></head>
+<link rel="stylesheet" href="site-brand.css"><link rel="icon" type="image/png" href="images/doberman-logo.png"><link rel="stylesheet" href="games/arcade.css"></head>
 	<body data-page="home">
 		<header class="site-header">
 			<a class="site-title" href="#home"><img class="site-logo" src="images/doberman-logo.png" alt="" width="72" height="72"><span>The Devastating Doberman</span></a>
@@ -167,8 +167,8 @@
 			</figure>
 			</section>
 			<section id="games" class="game-section" aria-labelledby="games-title" hidden>
-				<h1 id="games-title">Games</h1>
-				<div class="game-picker" aria-label="Choose a game"><button type="button" data-game="dash" aria-pressed="true">Doberman Dash</button><button type="button" data-game="tetris" aria-pressed="false">Doberman Tetris</button><button type="button" data-game="snake" aria-pressed="false">Doberman Snake</button><button type="button" data-game="adventure" aria-pressed="false">8-Bit Adventure</button></div><article id="dash-game">
+				<h1 id="games-title">The Doberman Arcade</h1><p class="arcade-intro">20 games. One red-and-rust troublemaker. Pick a game and let Louis loose!</p><details class="arcade-library" open><summary>Choose a game &middot; <span id="arcade-count">20</span> games</summary><label class="arcade-search">Find a game<input id="arcade-search" type="search" placeholder="Search games" autocomplete="off"></label>
+				<div class="game-picker" aria-label="Choose a game"><button type="button" data-game="dash" aria-pressed="true">Doberman Dash</button><button type="button" data-game="tetris" aria-pressed="false">Doberman Tetris</button><button type="button" data-game="snake" aria-pressed="false">Doberman Snake</button><button type="button" data-game="adventure" aria-pressed="false">8-Bit Adventure</button></div><p id="arcade-empty" hidden>No games match. Try another name.</p><p class="arcade-now">Now playing: <strong id="arcade-selected">Doberman Dash</strong></p></details><article id="dash-game">
 <div class="runner-heading"><div><p class="game-eyebrow">Run, Louie, run!</p><h2>Doberman Dash</h2></div><div class="scoreboard"><span>Score <strong id="run-score">0</strong></span><span>Best <strong id="run-best">0</strong></span></div></div>
 <div class="runner-field"><canvas id="runner" width="900" height="360" tabindex="0" aria-label="Doberman Dash. Jump over fences and flowerpots using Space, Arrow Up, or the Jump button.">Your browser needs canvas support to play Doberman Dash.</canvas></div>
 <p id="run-status" role="status">Ready to run? Help Louie jump over fences and flowerpots.</p>
@@ -204,7 +204,7 @@
 <div class="adventure-touch" aria-label="Adventure controls"><div><button type="button" data-adventure="left" aria-label="Move left">&#8592;</button><button type="button" data-adventure="right" aria-label="Move right">&#8594;</button></div><button type="button" data-adventure="jump">Jump &#8593;</button></div>
 <p class="runner-help">Left / Right or A / D: move &middot; Space / Up / W: jump &middot; P: pause. Hold the direction buttons on your phone. Reach the doghouse in all three levels!</p>
 </article>
-<script src="games/adventure.js" defer></script><script src="games/snake.js" defer></script><script src="games/runner.js" defer></script><script src="games/tetris.js" defer></script>
+<script src="games/arcade.js" defer></script><script src="games/arcade-action.js" defer></script><script src="games/arcade-puzzles.js" defer></script><script src="games/arcade-skills.js" defer></script><script src="games/arcade-tug.js" defer></script><script src="games/adventure.js" defer></script><script src="games/snake.js" defer></script><script src="games/runner.js" defer></script><script src="games/tetris.js" defer></script>
 			</section>
 			<section id="why-i-hate-louis" class="placeholder" aria-labelledby="louis-title" hidden>
 				<h1 id="louis-title">Why I Hate Louis</h1>
