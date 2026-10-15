@@ -140,7 +140,7 @@
 </style>
 	<link rel="stylesheet" href="games/runner.css">
 <link rel="stylesheet" href="games/tetris.css">
-
+<link rel="stylesheet" href="games/snake.css">
 </head>
 	<body>
 		<header class="site-header">
@@ -167,7 +167,7 @@
 			</section>
 			<section id="games" class="game-section" aria-labelledby="games-title" hidden>
 				<h1 id="games-title">Games</h1>
-				<div class="game-picker" aria-label="Choose a game"><button type="button" data-game="dash" aria-pressed="true">Doberman Dash</button><button type="button" data-game="tetris" aria-pressed="false">Doberman Tetris</button></div><article id="dash-game">
+				<div class="game-picker" aria-label="Choose a game"><button type="button" data-game="dash" aria-pressed="true">Doberman Dash</button><button type="button" data-game="tetris" aria-pressed="false">Doberman Tetris</button><button type="button" data-game="snake" aria-pressed="false">Doberman Snake</button></div><article id="dash-game">
 <div class="runner-heading"><div><p class="game-eyebrow">Run, Louie, run!</p><h2>Doberman Dash</h2></div><div class="scoreboard"><span>Score <strong id="run-score">0</strong></span><span>Best <strong id="run-best">0</strong></span></div></div>
 <div class="runner-field"><canvas id="runner" width="900" height="360" tabindex="0" aria-label="Doberman Dash. Jump over fences and flowerpots using Space, Arrow Up, or the Jump button.">Your browser needs canvas support to play Doberman Dash.</canvas></div>
 <p id="run-status" role="status">Ready to run? Help Louie jump over fences and flowerpots.</p>
@@ -187,7 +187,15 @@
 <div class="tetris-touch" aria-label="Tetris controls"><button type="button" data-tetris="left" aria-label="Move left">&#8592;</button><button type="button" data-tetris="rotate">Rotate</button><button type="button" data-tetris="right" aria-label="Move right">&#8594;</button><button type="button" data-tetris="down">Down</button><button type="button" data-tetris="drop">Drop</button></div>
 <p class="runner-help">Left / Right: move &middot; Up: rotate &middot; Down: soft drop &middot; Space: drop &middot; P: pause. Use the buttons on your phone.</p>
 </article>
-<script src="games/runner.js" defer></script><script src="games/tetris.js" defer></script>
+<article id="snake-game" hidden>
+<div class="runner-heading"><div><p class="game-eyebrow">A very long good boy</p><h2>Doberman Snake</h2></div><div class="scoreboard"><span>Score <strong id="snake-score">0</strong></span><span>Best <strong id="snake-best">0</strong></span></div></div>
+<div class="snake-field"><canvas id="snake-board" width="600" height="600" tabindex="0" aria-label="Doberman Snake. Collect bones and toys. Use arrow keys or swipe to steer. Avoid walls and your tail.">Canvas support is needed to play.</canvas></div>
+<p id="snake-status" role="status">Collect bones and toys to grow. Watch out for walls and your own tail!</p>
+<div class="runner-controls"><button id="snake-start" type="button">Start Snake</button><button id="snake-pause" type="button" disabled>Pause</button></div>
+<div class="snake-pad" aria-label="Snake direction controls"><button type="button" data-snake="up" aria-label="Go up">&#8593;</button><button type="button" data-snake="left" aria-label="Go left">&#8592;</button><button type="button" data-snake="down" aria-label="Go down">&#8595;</button><button type="button" data-snake="right" aria-label="Go right">&#8594;</button></div>
+<p class="runner-help">Arrow keys or WASD to steer &middot; P to pause &middot; Swipe the board or use the buttons on your phone. Every bone or toy adds a point!</p>
+</article>
+<script src="games/snake.js" defer></script><script src="games/runner.js" defer></script><script src="games/tetris.js" defer></script>
 			</section>
 			<section id="why-i-hate-louis" class="placeholder" aria-labelledby="louis-title" hidden>
 				<h1 id="louis-title">Why I Hate Louis</h1>
