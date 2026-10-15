@@ -26,3 +26,14 @@ footer { background:#ffc2db; }
 .eyebrow,.text-link,.gallery-card p { color:#9a6200; }
 .hero h1 { color:#b77b09; }
 .hero .button-light { color:#8e5800; border-color:#8e5800; }
+:root { --gold:#ffd700; --gold-light:#ff1493; --paper:#ff1493; --line:#ffd700; --ink:#ffd700; }
+body,.site-header,.site-menu nav,.feature-card,.panel,.price-card,.gallery-card,footer { background:#ff1493; color:#ffd700; }
+.hero { background:radial-gradient(ellipse at top,#ff66b9,transparent 65%),#ff1493; }
+.button,.button-light { background:#ff1493; border-color:#ffd700; color:#ffd700; }
+.button:hover,.button-light:hover,.site-menu nav a:hover,.site-menu nav a[aria-current="page"] { background:#ff5bb1; color:#ffd700; }
+input,textarea { background:#ff1493; border-color:#ffd700; color:#ffd700; }
+.gallery-card img { background:#ff1493; }
+.eyebrow,.text-link,.gallery-card p { color:#ffd700; }
+.hero .button-light { color:#ffd700; border-color:#ffd700; }
+.site-menu summary { background:#ff1493; border:1px solid #ffd700; color:#ffd700; }
+input::placeholder,textarea::placeholder { color:#ffd700; opacity:.85; }
