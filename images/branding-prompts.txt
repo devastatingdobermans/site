@@ -1,0 +1,7 @@
+Generated with the built-in imagegen tool.
+
+Logo prompt:
+Use case: logo-brand. Create one polished circular emblem logo for a personal website called The Devastating Doberman. A handsome red-and-rust Doberman head front-facing at center, deep reddish chocolate brown coat, warm copper rust eyebrows, muzzle and cheeks, amber eyes, pointed ears. Friendly confident personality. Clean bold illustrated badge with precise outlines, cream circular inner field and copper outer ring, very legible even at 64px. No text, no letters, no watermark. Fully transparent outside the circular badge. Centered square composition, entire circle visible with small transparent margin. This is a finished website brand asset, not a mockup.
+
+Background prompt:
+Use case: illustration-story. Asset type: seamless repeating website wallpaper tile, square. A tasteful scattered pattern of ONLY red-and-rust Doberman dogs on a warm pale cream background (#f6f1e8). Deep reddish chocolate coats and copper rust muzzle, eyebrows, chests and legs, amber eyes, pointed ears. Mix of full-body standing, sitting, play-bow and curled-up poses and a few head portraits, varied orientations, around 10 small dogs evenly spaced with generous background between. Charming hand-drawn flat illustration, crisp outlines, warm limited palette, understated elegant stationery pattern. Seamless matching edges for tiling, keep dogs away from edges unless they wrap correctly. No words, no logos, no other breeds, no black-coated Dobermans, no watermark. Actual finished pattern image only, not a website screenshot.

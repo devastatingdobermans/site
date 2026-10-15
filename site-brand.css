@@ -1,0 +1,11 @@
+/* Main website branding; Nails by Phia does not load this stylesheet. */
+.site-header { padding:12px 24px; background:#fffaf2; border-bottom:2px solid #b2754a; }
+.site-title { display:flex; align-items:center; gap:14px; max-width:calc(100% - 105px); font-weight:700; color:#60352d; }
+.site-title .site-logo { display:block; flex:0 0 72px; width:72px; height:72px; max-height:none; object-fit:contain; border-radius:50%; }
+body[data-page="home"] { background-color:#f6f1e8; background-image:url('images/doberman-pattern.png'); background-repeat:repeat; background-size:540px 540px; }
+body[data-page="home"] .page { min-height:calc(100svh - 98px); padding:32px 24px; }
+#home figure { height:auto; min-height:calc(100svh - 162px); justify-content:center; gap:22px; }
+#home .image-frame { flex:0 1 auto; width:min(100%,660px); margin:0 auto; }
+#home .image-frame img { display:block; width:100%; height:auto; max-height:65svh; object-fit:contain; border:6px solid #fffaf2; box-sizing:border-box; border-radius:16px; box-shadow:0 10px 34px #46261f30; }
+#home figcaption { padding:14px 22px; border:1px solid #b2754a; border-radius:16px; background:#fffaf2; color:#60352d; box-shadow:0 5px 18px #46261f15; }
+@media(max-width:500px) { .site-header { padding:10px 16px; gap:10px; }.site-title { gap:8px; font-size:1rem; }.site-title .site-logo { flex-basis:52px; width:52px; height:52px; }body[data-page="home"] { background-size:360px 360px; }body[data-page="home"] .page { padding:28px 18px; min-height:calc(100svh - 74px); }#home figure { min-height:calc(100svh - 130px); }#home figcaption { font-size:1.15rem; line-height:1.4; } }

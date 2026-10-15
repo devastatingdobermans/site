@@ -142,10 +142,10 @@
 <link rel="stylesheet" href="games/tetris.css">
 <link rel="stylesheet" href="games/snake.css">
 <link rel="stylesheet" href="games/adventure.css">
-</head>
-	<body>
+<link rel="stylesheet" href="site-brand.css"><link rel="icon" type="image/png" href="images/doberman-logo.png"></head>
+	<body data-page="home">
 		<header class="site-header">
-			<a class="site-title" href="#home">The Devastating Doberman</a>
+			<a class="site-title" href="#home"><img class="site-logo" src="images/doberman-logo.png" alt="" width="72" height="72"><span>The Devastating Doberman</span></a>
 			<details class="site-menu">
 				<summary><span aria-hidden="true">&#9776;</span>Menu</summary>
 				<nav class="site-nav" aria-label="Main menu">
@@ -235,7 +235,8 @@
 			function showPage() {
 				const requested = window.location.hash.slice(1) || 'home';
 				const page = sections.some(section => section.id === requested) ? requested : 'home';
-				sections.forEach(section => { section.hidden = section.id !== page; });
+				document.body.dataset.page = page;
+                sections.forEach(section => { section.hidden = section.id !== page; });
 				links.forEach(link => {
 					if (link.hash === '#' + page) link.setAttribute('aria-current', 'page');
 					else link.removeAttribute('aria-current');
