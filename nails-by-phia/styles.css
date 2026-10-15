@@ -57,3 +57,5 @@ body,body * { color:#6b5610; -webkit-text-fill-color:#6b5610; }
 a:hover,a:focus,a:visited,.button:hover,.button-light:hover,.site-menu nav a:hover,.site-menu nav a[aria-current="page"],.hero .button-light { color:#6b5610; }
 input::placeholder,textarea::placeholder { color:#6b5610; -webkit-text-fill-color:#6b5610; opacity:1; }
 input::file-selector-button { color:#6b5610; -webkit-text-fill-color:#6b5610; }
+
+.brand,.brand:hover,.brand:focus,.brand:visited { color:#6b5610; -webkit-text-fill-color:#6b5610; background:none; }
