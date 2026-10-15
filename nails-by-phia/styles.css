@@ -50,12 +50,26 @@ body { color:#b8860b; text-shadow:0 1px 1px #fff3b0; }
 .brand,h1,h2,p,label,.price,.form-note,footer strong,footer a,.text-link { color:#8b6506; background-image:linear-gradient(120deg,#8e5800 0%,#fff0a6 32%,#c48912 52%,#fff4b8 74%,#925a00 100%); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; }
 .site-menu summary,.site-menu nav a,.button,.button-light,input,textarea { color:#d4af37; text-shadow:0 1px 1px #7a480055; }
 
-/* Use the requested gold consistently, including links and form controls. */
-:root { --gold:#6b5610; --ink:#6b5610; }
-body,body * { color:#6b5610; -webkit-text-fill-color:#6b5610; }
+/* Follow the device theme while keeping the gold and pink identity. */
+:root { color-scheme:light; --text-gold:#6b5610; --gold:var(--text-gold); --ink:var(--text-gold); }
+body,body * { color:var(--text-gold); -webkit-text-fill-color:var(--text-gold) !important; }
 .brand,h1,h2,p,label,.price,.form-note,footer strong,footer a,.text-link { background-image:none; }
-a:hover,a:focus,a:visited,.button:hover,.button-light:hover,.site-menu nav a:hover,.site-menu nav a[aria-current="page"],.hero .button-light { color:#6b5610; }
-input::placeholder,textarea::placeholder { color:#6b5610; -webkit-text-fill-color:#6b5610; opacity:1; }
-input::file-selector-button { color:#6b5610; -webkit-text-fill-color:#6b5610; }
-
-.brand,.brand:hover,.brand:focus,.brand:visited { color:#6b5610; -webkit-text-fill-color:#6b5610; background:none; }
+a:hover,a:focus,a:visited,.button:hover,.button-light:hover,.site-menu nav a:hover,.site-menu nav a[aria-current="page"],.hero .button-light { color:var(--text-gold); }
+input::placeholder,textarea::placeholder { color:var(--text-gold); -webkit-text-fill-color:var(--text-gold); opacity:1; }
+input::file-selector-button { color:var(--text-gold); -webkit-text-fill-color:var(--text-gold); }
+.brand,.brand:hover,.brand:focus,.brand:visited { color:var(--text-gold); -webkit-text-fill-color:var(--text-gold); background:none; }
+@media (prefers-color-scheme:dark) {
+  :root { color-scheme:dark; --text-gold:#e2c66d; --paper:#24171e; --gold-light:#49303e; --line:#957c46; }
+  body,.site-header,footer { background:var(--paper); }
+  body,body * { text-shadow:none; }
+  .hero { background:#35212d; }
+  .site-menu nav,.feature-card,.panel,.price-card,.gallery-card,.gallery-slot { background:#30212a; border-color:var(--line); }
+  .site-header,footer { border-color:var(--line); }
+  .button,.button-light,.site-menu summary { background:#3d2934; border-color:var(--text-gold); }
+  .button:hover,.button-light:hover,.site-menu nav a:hover,.site-menu nav a[aria-current="page"] { background:var(--gold-light); }
+  input,textarea { background:#21171d; border-color:var(--line); }
+  input::file-selector-button { background:#49303e; border:1px solid var(--line); border-radius:4px; }
+  .notice { background:#3d2934; border-color:var(--text-gold); }
+  .gallery-card img { background:#30212a; }
+  a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,summary:focus-visible { outline-color:var(--text-gold); }
+}
