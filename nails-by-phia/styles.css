@@ -16,3 +16,13 @@
 .hero { background:radial-gradient(ellipse at top,#ffe8a2,transparent 65%),#d4a23a; }
 .hero h1 { color:#754900; }
 .hero .button-light { color:#754900; border-color:#754900; }
+:root { --gold:#a86f05; --gold-light:#ffe1ed; --paper:#ffd6e6; --line:#e59ab9; --ink:#845100; }
+body { background:#ffd6e6; color:var(--ink); }
+.site-header { background:#ffc2db; }
+.site-menu nav,.feature-card,.panel,.price-card,.gallery-card { background:#ffeaf2; }
+.hero { background:radial-gradient(ellipse at top,#ffeaf3,transparent 65%),#f3a6c6; }
+footer { background:#ffc2db; }
+.brand,h1,h2 { color:#b77b09; background:linear-gradient(120deg,#8e5800 0%,#fff0a6 35%,#c18309 56%,#fff3b8 74%,#925a00 100%); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; text-shadow:0 1px 1px #fff4b850; }
+.eyebrow,.text-link,.gallery-card p { color:#9a6200; }
+.hero h1 { color:#b77b09; }
+.hero .button-light { color:#8e5800; border-color:#8e5800; }
