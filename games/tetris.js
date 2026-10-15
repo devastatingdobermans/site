@@ -128,7 +128,7 @@
   document.addEventListener('visibilitychange',away);window.addEventListener('hashchange',away);window.addEventListener('gamechange',away);
   document.querySelectorAll('[data-game]').forEach(button=>button.addEventListener('click',()=>{
     const selected=button.dataset.game;
-    el('dash-game').hidden=selected!=='dash';el('tetris-game').hidden=selected!=='tetris';
+    document.querySelectorAll('#games > article').forEach(game=>game.hidden=game.id!==selected+'-game');
     document.querySelectorAll('[data-game]').forEach(tab=>tab.setAttribute('aria-pressed',String(tab.dataset.game===selected)));
     window.dispatchEvent(new Event('gamechange'));
   }));

@@ -1,0 +1,8 @@
+.snake-field { max-width:600px; overflow:hidden; border:3px solid #897151; border-radius:14px; background:#efe8d5; }
+#snake-board { display:block; width:100%; height:auto; touch-action:none; }
+#snake-board:focus-visible { outline:3px solid #a25c2e; outline-offset:-5px; }
+.snake-pad { display:grid; grid-template-columns:repeat(3,64px); grid-template-rows:repeat(2,52px); gap:8px; margin-top:18px; width:max-content; }
+.snake-pad button { border:2px solid #c8b69a; border-radius:10px; background:#fffaf0; color:#38291e; font:bold 1.5rem Arial,sans-serif; cursor:pointer; touch-action:manipulation; }
+.snake-pad button[data-snake="up"] { grid-column:2; }.snake-pad button[data-snake="left"] { grid-column:1; grid-row:2; }.snake-pad button[data-snake="down"] { grid-column:2; grid-row:2; }.snake-pad button[data-snake="right"] { grid-column:3; grid-row:2; }
+.snake-pad button:disabled { opacity:.45; cursor:default; }.snake-pad button:focus-visible { outline:3px solid #a25c2e; outline-offset:3px; }
+.snake-pad button:not(:disabled):active { background:#e5c98f; }
