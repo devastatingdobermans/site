@@ -78,17 +78,17 @@
   function drawDog() {
     ctx.save(); ctx.translate(dogX, ground - y);
     const stride = mode === 'running' && y === 0 ? Math.sin(elapsed * 24) * 9 : 0;
-    ctx.strokeStyle = '#251d1b'; ctx.lineWidth = 9; ctx.lineCap = 'round';
+    ctx.strokeStyle = '#62362f'; ctx.lineWidth = 9; ctx.lineCap = 'round';
     for (const [x, swing] of [[22,stride],[38,-stride],[64,-stride],[76,stride]]) {
       ctx.beginPath(); ctx.moveTo(x,-33); ctx.lineTo(x + swing,-9); ctx.lineTo(x + swing + 8,-5); ctx.stroke();
-      ctx.fillStyle = '#aa6235'; ctx.fillRect(x + swing + 1,-9,12,6);
+      ctx.fillStyle = '#bd7849'; ctx.fillRect(x + swing + 1,-9,12,6);
     }
-    polygon([[7,-45],[20,-55],[67,-53],[77,-67],[88,-66],[95,-49],[82,-35],[25,-30],[12,-34]],'#251d1b');
-    polygon([[72,-66],[73,-93],[83,-76],[91,-94],[96,-65]],'#251d1b');
-    polygon([[80,-59],[105,-57],[108,-48],[88,-43]],'#aa6235');
-    polygon([[70,-48],[80,-50],[81,-36],[70,-31]],'#aa6235');
-    polygon([[12,-46],[1,-58],[-5,-57],[3,-38],[18,-34]],'#251d1b');
-    ctx.fillStyle = '#251d1b'; ctx.fillRect(101,-57,8,6);
+    polygon([[7,-45],[20,-55],[67,-53],[77,-67],[88,-66],[95,-49],[82,-35],[25,-30],[12,-34]],'#62362f');
+    polygon([[72,-66],[73,-93],[83,-76],[91,-94],[96,-65]],'#62362f');
+    polygon([[80,-59],[105,-57],[108,-48],[88,-43]],'#bd7849');
+    polygon([[70,-48],[80,-50],[81,-36],[70,-31]],'#bd7849');
+    polygon([[12,-46],[1,-58],[-5,-57],[3,-38],[18,-34]],'#62362f');
+    ctx.fillStyle = '#422522'; ctx.fillRect(101,-57,8,6);
     ctx.fillStyle = '#f3d27a'; ctx.fillRect(86,-67,4,4);
     ctx.strokeStyle = '#b2443f'; ctx.lineWidth = 5;
     ctx.beginPath(); ctx.moveTo(74,-54); ctx.lineTo(83,-47); ctx.stroke();
