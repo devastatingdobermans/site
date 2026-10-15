@@ -49,3 +49,5 @@ input,textarea { background:#ffd1e5; border-color:#a66a00; color:#a66a00; }
 body { color:#b8860b; text-shadow:0 1px 1px #fff3b0; }
 .brand,h1,h2,p,label,.price,.form-note,footer strong,footer a,.text-link { color:#b8860b; background-image:linear-gradient(120deg,#8e5800 0%,#fff0a6 32%,#c48912 52%,#fff4b8 74%,#925a00 100%); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; }
 .site-menu summary,.site-menu nav a,.button,.button-light,input,textarea { color:#d4af37; text-shadow:0 1px 1px #7a480055; }
+body,.site-header,.site-menu nav,.feature-card,.panel,.price-card,.gallery-card,footer,.hero,.button,.button-light,.site-menu summary,input,textarea,.gallery-card img { background:#ffd1e5; }
+.button:hover,.button-light:hover,.site-menu nav a:hover,.site-menu nav a[aria-current="page"] { background:#ffd1e5; }
