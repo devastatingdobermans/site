@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 	<head>
 		<title>Louie is the Best Dog!!!</title>
 		<meta charset="UTF-8" />
@@ -22,9 +22,44 @@
 				display: flex;
 				align-items: center;
 				justify-content: center;
-				height: 100vh;
+				min-height: calc(100svh - 76px);
 				padding: 16px;
 			}
+
+			.site-nav {
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: center;
+				gap: 8px;
+				padding: 16px;
+				border-bottom: 1px solid #ded3c3;
+			}
+
+			.site-nav a {
+				padding: 10px 16px;
+				border-radius: 8px;
+				color: inherit;
+				text-decoration: none;
+				font-family: Arial, sans-serif;
+				font-weight: bold;
+			}
+
+			.site-nav a:hover,
+			.site-nav a[aria-current="page"] {
+				background: #1f1a17;
+				color: #fff;
+			}
+
+			.site-nav a:focus-visible {
+				outline: 3px solid #a25c2e;
+				outline-offset: 3px;
+			}
+
+			section { width: 100%; }
+			[hidden] { display: none !important; }
+			.placeholder { text-align: center; max-width: 640px; }
+			h1 { font-size: clamp(2rem, 6vw, 3.5rem); }
+			.placeholder p { font-size: 1.2rem; line-height: 1.6; }
 
 			figure {
 				display: flex;
@@ -32,7 +67,7 @@
 				align-items: center;
 				gap: 12px;
 				width: 100%;
-				height: 100%;
+				height: calc(100svh - 108px);
 				margin: 0;
 			}
 
@@ -62,13 +97,44 @@
 		</style>
 	</head>
 	<body>
+		<nav class="site-nav" aria-label="Main menu">
+			<a href="#home" aria-current="page">Home</a>
+			<a href="#games">Games</a>
+			<a href="#why-i-hate-louis">Why I Hate Louis</a>
+			<a href="trauth-nails.html">Trauth Nails</a>
+		</nav>
 		<main class="page">
+			<section id="home" aria-label="Home">
 			<figure>
 				<div class="image-frame">
 					<img src="louie.jpg" alt="Louie" />
 				</div>
-				<figcaption>Louie is the best dog --- Chris.</figcaption>
+				<figcaption>Louie is the worst dog --- Chris.</figcaption>
 			</figure>
+			</section>
+			<section id="games" class="placeholder" aria-labelledby="games-title" hidden>
+				<h1 id="games-title">Games</h1>
+				<p>Games are coming soon. Check back for something fun to play!</p>
+			</section>
+			<section id="why-i-hate-louis" class="placeholder" aria-labelledby="louis-title" hidden>
+				<h1 id="louis-title">Why I Hate Louis</h1>
+				<p>Coming soon.</p>
+			</section>
 		</main>
+		<script>
+			const sections = [...document.querySelectorAll('main section')];
+			const links = [...document.querySelectorAll('.site-nav a')];
+			function showPage() {
+				const requested = window.location.hash.slice(1) || 'home';
+				const page = sections.some(section => section.id === requested) ? requested : 'home';
+				sections.forEach(section => { section.hidden = section.id !== page; });
+				links.forEach(link => {
+					if (link.hash === '#' + page) link.setAttribute('aria-current', 'page');
+					else link.removeAttribute('aria-current');
+				});
+			}
+			window.addEventListener('hashchange', showPage);
+			showPage();
+		</script>
 	</body>
 </html>
