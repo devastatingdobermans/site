@@ -13,7 +13,7 @@ button,input,textarea,summary,input::file-selector-button { text-shadow:0 1px 0 
 @media(max-width:900px){.gallery-grid { grid-template-columns:repeat(2,minmax(0,1fr)); --gallery-gap:32px; row-gap:40px; }}
 @media(max-width:600px){.gallery-grid { grid-template-columns:1fr; --gallery-gap:0; row-gap:32px; }}
 /* Solid dark gold keeps every letter readable; a fine highlight adds sheen. */
-:root { --gold:#593900; --ink:#593900; --gold-light:#f6b9d3; --paper:#ffd1e5; --line:#795500; }
+:root { --gold:#593900; --ink:#593900; --gold-light:#eda5c4; --paper:#f4b8d1; --line:#795500; }
 body { line-height:1.6; text-shadow:0 1px 0 #fff5d680; }
 .site-header,footer { background:var(--paper); }
 .hero { background:var(--gold-light); }
