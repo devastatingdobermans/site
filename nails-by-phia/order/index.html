@@ -6,23 +6,23 @@
   <title>Place an Order | Nails by Phia</title>
   <link rel="stylesheet" href="../styles.css">
 </head>
-<body><a class="skip-link" href="#main-content">Skip to main content</a>
+<body>
   <header class="site-header">
     <a class="brand" href="../index.html">Nails by Phia</a>
     <details class="site-menu"><summary><span aria-hidden="true">&#9776;</span>Menu</summary><nav aria-label="Nails by Phia menu"><a href="../index.html">Home</a><a href="../prices/">Prices</a><a href="../gallery/">Past sets</a><a href="index.html" aria-current="page">Place an order</a><a href="tel:+15136075680">Call or text Phia</a></nav></details>
   </header>
-  <main id="main-content" tabindex="-1" class="page-content">
+  <main class="page-content">
     <div class="page-intro"><p class="eyebrow">Custom order</p><h1>Place an Order</h1><p>Tell Phia what you have in mind and attach your nail inspiration photo if you have one.</p></div>
     <section class="panel">
-      <p id="order-help" class="form-note">Name, email, phone number, and shipping address are required. The reference photo and customization notes are optional.</p><form aria-describedby="order-help" class="order-form" action="https://formsubmit.co/290186@mcnhs.org" method="POST" enctype="multipart/form-data">
+      <form class="order-form" action="https://formsubmit.co/290186@mcnhs.org" method="POST" enctype="multipart/form-data">
         <input type="hidden" name="_subject" value="New Nails by Phia order">
         <input type="hidden" name="_next" value="https://devastatingdobermans.com/nails-by-phia/order/thank-you.html">
         <input type="text" name="_honey" tabindex="-1" autocomplete="off" style="display:none">
-        <div class="form-row"><label>Your name (required)<input name="name" required autocomplete="name"></label><label>Email (required)<input name="email" type="email" required autocomplete="email"></label></div>
-        <div class="form-row"><label>Phone number (required)<input name="phone" type="tel" required autocomplete="tel"></label><label>Shipping address (required)<input name="address" required autocomplete="street-address"></label></div>
-        <label>Reference photo <span>(optional)</span><input aria-describedby="photo-help" name="attachment" type="file" accept="image/jpeg,image/png,image/webp"></label>
+        <div class="form-row"><label>Your name<input name="name" required autocomplete="name"></label><label>Email<input name="email" type="email" required autocomplete="email"></label></div>
+        <div class="form-row"><label>Phone number<input name="phone" type="tel" required autocomplete="tel"></label><label>Shipping address<input name="address" required autocomplete="street-address"></label></div>
+        <label>Reference photo <span>(optional)</span><input name="attachment" type="file" accept="image/jpeg,image/png,image/webp"></label>
         <label>Customization notes<textarea name="customization_notes" placeholder="Colors, length, shape, charms, or any details you want"></textarea></label>
-        <p id="photo-help" class="form-note">Orders are sent privately to Nails by Phia. Please use a JPG, PNG, or WebP photo under 10 MB.</p>
+        <p class="form-note">Orders are sent privately to Nails by Phia. Please use a JPG, PNG, or WebP photo under 10 MB.</p>
         <button class="button" type="submit">Send my order</button>
       </form>
     </section>
