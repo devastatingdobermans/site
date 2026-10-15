@@ -51,9 +51,9 @@ body { color:#b8860b; text-shadow:0 1px 1px #fff3b0; }
 .site-menu summary,.site-menu nav a,.button,.button-light,input,textarea { color:#d4af37; text-shadow:0 1px 1px #7a480055; }
 
 /* Use the requested gold consistently, including links and form controls. */
-:root { --gold:#bb9b30; --ink:#bb9b30; }
-body,body * { color:#bb9b30; -webkit-text-fill-color:#bb9b30; }
+:root { --gold:#6b5610; --ink:#6b5610; }
+body,body * { color:#6b5610; -webkit-text-fill-color:#6b5610; }
 .brand,h1,h2,p,label,.price,.form-note,footer strong,footer a,.text-link { background-image:none; }
-a:hover,a:focus,a:visited,.button:hover,.button-light:hover,.site-menu nav a:hover,.site-menu nav a[aria-current="page"],.hero .button-light { color:#bb9b30; }
-input::placeholder,textarea::placeholder { color:#bb9b30; -webkit-text-fill-color:#bb9b30; opacity:1; }
-input::file-selector-button { color:#bb9b30; -webkit-text-fill-color:#bb9b30; }
+a:hover,a:focus,a:visited,.button:hover,.button-light:hover,.site-menu nav a:hover,.site-menu nav a[aria-current="page"],.hero .button-light { color:#6b5610; }
+input::placeholder,textarea::placeholder { color:#6b5610; -webkit-text-fill-color:#6b5610; opacity:1; }
+input::file-selector-button { color:#6b5610; -webkit-text-fill-color:#6b5610; }
