@@ -137,7 +137,8 @@
 				line-height: 1.2;
 			}
 		</style>
-	</head>
+	<link rel="stylesheet" href="games/runner.css">
+</head>
 	<body>
 		<header class="site-header">
 			<a class="site-title" href="#home">Devastating Dobermans</a>
@@ -161,9 +162,14 @@
 				<figcaption>Louie is the worst dog --- Chris.</figcaption>
 			</figure>
 			</section>
-			<section id="games" class="placeholder" aria-labelledby="games-title" hidden>
+			<section id="games" class="game-section" aria-labelledby="games-title" hidden>
 				<h1 id="games-title">Games</h1>
-				<p>Games are coming soon. Check back for something fun to play!</p>
+				<div class="runner-heading"><div><p class="game-eyebrow">Run, Louie, run!</p><h2>Doberman Dash</h2></div><div class="scoreboard"><span>Score <strong id="run-score">0</strong></span><span>Best <strong id="run-best">0</strong></span></div></div>
+<div class="runner-field"><canvas id="runner" width="900" height="360" tabindex="0" aria-label="Doberman Dash. Jump over fences and flowerpots using Space, Arrow Up, or the Jump button.">Your browser needs canvas support to play Doberman Dash.</canvas></div>
+<p id="run-status" role="status">Ready to run? Help Louie jump over fences and flowerpots.</p>
+<div class="runner-controls"><button id="run-start" type="button">Start game</button><button id="run-jump" type="button" disabled>Jump</button><button id="run-pause" type="button" disabled>Pause</button></div>
+<p class="runner-help">Space / ↑ to jump · P to pause · Tap the game or Jump on your phone. The longer you run, the faster it gets!</p>
+<script src="games/runner.js" defer></script>
 			</section>
 			<section id="why-i-hate-louis" class="placeholder" aria-labelledby="louis-title" hidden>
 				<h1 id="louis-title">Why I Hate Louis</h1>
