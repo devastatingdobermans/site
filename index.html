@@ -141,6 +141,7 @@
 	<link rel="stylesheet" href="games/runner.css">
 <link rel="stylesheet" href="games/tetris.css">
 <link rel="stylesheet" href="games/snake.css">
+<link rel="stylesheet" href="games/adventure.css">
 </head>
 	<body>
 		<header class="site-header">
@@ -167,7 +168,7 @@
 			</section>
 			<section id="games" class="game-section" aria-labelledby="games-title" hidden>
 				<h1 id="games-title">Games</h1>
-				<div class="game-picker" aria-label="Choose a game"><button type="button" data-game="dash" aria-pressed="true">Doberman Dash</button><button type="button" data-game="tetris" aria-pressed="false">Doberman Tetris</button><button type="button" data-game="snake" aria-pressed="false">Doberman Snake</button></div><article id="dash-game">
+				<div class="game-picker" aria-label="Choose a game"><button type="button" data-game="dash" aria-pressed="true">Doberman Dash</button><button type="button" data-game="tetris" aria-pressed="false">Doberman Tetris</button><button type="button" data-game="snake" aria-pressed="false">Doberman Snake</button><button type="button" data-game="adventure" aria-pressed="false">8-Bit Adventure</button></div><article id="dash-game">
 <div class="runner-heading"><div><p class="game-eyebrow">Run, Louie, run!</p><h2>Doberman Dash</h2></div><div class="scoreboard"><span>Score <strong id="run-score">0</strong></span><span>Best <strong id="run-best">0</strong></span></div></div>
 <div class="runner-field"><canvas id="runner" width="900" height="360" tabindex="0" aria-label="Doberman Dash. Jump over fences and flowerpots using Space, Arrow Up, or the Jump button.">Your browser needs canvas support to play Doberman Dash.</canvas></div>
 <p id="run-status" role="status">Ready to run? Help Louie jump over fences and flowerpots.</p>
@@ -195,7 +196,15 @@
 <div class="snake-pad" aria-label="Snake direction controls"><button type="button" data-snake="up" aria-label="Go up">&#8593;</button><button type="button" data-snake="left" aria-label="Go left">&#8592;</button><button type="button" data-snake="down" aria-label="Go down">&#8595;</button><button type="button" data-snake="right" aria-label="Go right">&#8594;</button></div>
 <p class="runner-help">Arrow keys or WASD to steer &middot; P to pause &middot; Swipe the board or use the buttons on your phone. Every bone or toy adds a point!</p>
 </article>
-<script src="games/snake.js" defer></script><script src="games/runner.js" defer></script><script src="games/tetris.js" defer></script>
+<article id="adventure-game" hidden>
+<div class="runner-heading"><div><p class="game-eyebrow">Little paws. Big adventure.</p><h2>Doberman 8-Bit Adventure</h2></div><div class="scoreboard"><span>Score <strong id="adventure-score">0</strong></span><span>Best <strong id="adventure-best">0</strong></span><span>Level <strong id="adventure-level">1 / 3</strong></span></div></div>
+<div class="adventure-field"><canvas id="adventure-board" width="960" height="480" tabindex="0" aria-label="Doberman platform adventure. Move with Left and Right. Jump with Space or Up. Collect bones, jump on toy enemies, and reach the doghouse.">Canvas support is needed to play.</canvas></div>
+<p id="adventure-status" role="status">Help Louis get home! Collect bones, leap over gaps, and jump on wind-up toys.</p>
+<div class="runner-controls"><button id="adventure-start" type="button">Start adventure</button><button id="adventure-pause" type="button" disabled>Pause</button></div>
+<div class="adventure-touch" aria-label="Adventure controls"><div><button type="button" data-adventure="left" aria-label="Move left">&#8592;</button><button type="button" data-adventure="right" aria-label="Move right">&#8594;</button></div><button type="button" data-adventure="jump">Jump &#8593;</button></div>
+<p class="runner-help">Left / Right or A / D: move &middot; Space / Up / W: jump &middot; P: pause. Hold the direction buttons on your phone. Reach the doghouse in all three levels!</p>
+</article>
+<script src="games/adventure.js" defer></script><script src="games/snake.js" defer></script><script src="games/runner.js" defer></script><script src="games/tetris.js" defer></script>
 			</section>
 			<section id="why-i-hate-louis" class="placeholder" aria-labelledby="louis-title" hidden>
 				<h1 id="louis-title">Why I Hate Louis</h1>
