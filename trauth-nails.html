@@ -15,6 +15,14 @@
     .brand { color:var(--pink); text-decoration:none; font-size:2rem; }
     nav { display:flex; flex-wrap:wrap; justify-content:center; gap:22px; }
     nav a { color:var(--ink); text-underline-offset:6px; font-size:.95rem; }
+    .site-menu { position:relative; margin:0; padding:0; border:0; background:transparent; }
+    .site-menu summary { list-style:none; border-radius:30px; padding:12px 20px; background:var(--pink); color:white; white-space:nowrap; font:1rem Georgia,serif; }
+    .site-menu summary::-webkit-details-marker { display:none; }
+    .site-menu summary span { margin-right:8px; }
+    .site-menu nav { position:absolute; right:0; top:calc(100% + 10px); z-index:2; display:flex; flex-direction:column; align-items:stretch; gap:4px; width:min(250px, calc(100vw - 48px)); padding:10px; border:1px solid var(--line); border-radius:14px; background:var(--paper); box-shadow:0 10px 30px #56273c20; }
+    .site-menu nav a { padding:12px; border-radius:8px; text-decoration:none; }
+    .site-menu nav a:hover, .site-menu nav a[aria-current="page"] { background:#ffe0ec; }
+    .site-menu summary:focus-visible { outline:3px solid #862452; outline-offset:4px; }
     .hero { text-align:center; padding:85px 20px 75px; background:radial-gradient(ellipse at top,#ffe0ec,transparent 70%),#fff2f7; border-bottom:1px solid var(--line); }
     .eyebrow { text-transform:uppercase; letter-spacing:3px; font: .75rem Arial,sans-serif; }
     h1 { font-size:clamp(4.5rem,12vw,8rem); line-height:1.15; color:var(--pink); margin:20px 0; }
@@ -47,13 +55,23 @@
     #status { min-height:1.5em; }
     footer { text-align:center; border-top:1px solid var(--line); padding:32px 20px; background:#ffeaf2; }
     footer .script { color:var(--pink); font-size:2rem; }
-    @media(max-width:540px) { header { flex-direction:column; padding:18px; } .hero { padding:55px 20px; } nav { gap:18px; } }
+    @media(max-width:540px) { header { flex-direction:column; padding:18px; } .hero { padding:55px 20px; } nav { gap:18px; } .site-menu nav { left:50%; right:auto; transform:translateX(-50%); } }
   </style>
 </head>
 <body>
   <header>
     <a class="brand script" href="#">Trauth Nails</a>
-    <nav aria-label="Main menu"><a href="index.html">Home</a><a href="#designs">Nail gallery</a><a href="#manage">Add photos</a></nav>
+    <details class="site-menu">
+      <summary><span aria-hidden="true">&#9776;</span>Menu</summary>
+      <nav aria-label="Main menu">
+        <a href="index.html">Home</a>
+        <a href="index.html#games">Games</a>
+        <a href="index.html#why-i-hate-louis">Why I Hate Louis</a>
+        <a href="trauth-nails.html" aria-current="page">Trauth Nails</a>
+        <a href="#designs">Nail gallery</a>
+        <a href="#manage">Add photos</a>
+      </nav>
+    </details>
   </header>
   <section class="hero">
     <div class="eyebrow">A little pink. A little polish.</div>
@@ -81,6 +99,16 @@
   </main>
   <footer><div class="script">Trauth Nails</div><p>A little beauty in every detail.</p></footer>
   <script>
+    const menu = document.querySelector('.site-menu');
+    menu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => { menu.open = false; });
+    });
+    document.addEventListener('keydown', event => {
+      if (event.key === 'Escape' && menu.open) {
+        menu.open = false;
+        menu.querySelector('summary').focus();
+      }
+    });
     const key = 'trauth-nails-gallery-v1';
     const gallery = document.querySelector('#gallery');
     const status = document.querySelector('#status');
