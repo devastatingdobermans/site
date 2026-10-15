@@ -1,0 +1,13 @@
+.game-picker { display:flex; flex-wrap:wrap; gap:10px; margin-bottom:28px; }
+.game-picker button,.tetris-touch button { border:2px solid #c8b69a; background:#fffaf0; color:#38291e; border-radius:10px; padding:13px 18px; font:bold 1rem Arial,sans-serif; cursor:pointer; touch-action:manipulation; }
+.game-picker button[aria-pressed="true"] { background:#38291e; border-color:#38291e; color:#fffaf0; }
+.tetris-layout { display:flex; gap:24px; align-items:flex-start; max-width:500px; }
+#tetris-board { display:block; width: min(65%,300px); height:auto; border:3px solid #897151; border-radius:8px; background:#211b18; touch-action:manipulation; }
+.tetris-side { flex:1; min-width:0; font:1rem Arial,sans-serif; }
+.tetris-side p { margin:0 0 16px; }.tetris-side strong { display:block; margin-top:4px; font:bold 1.6rem monospace; }
+#tetris-next { display:block; max-width:100%; height:auto; background:#211b18; border-radius:8px; }
+.tetris-mascot { margin-bottom:16px; }.tetris-mascot svg { max-width:100%; height:auto; }
+.tetris-touch { display:flex; flex-wrap:wrap; gap:8px; margin-top:14px; max-width:500px; }
+.tetris-touch button { flex:1; padding:14px 10px; }.tetris-touch button:disabled { opacity:.45; cursor:default; }
+.game-picker button:focus-visible,.tetris-touch button:focus-visible,#tetris-board:focus-visible { outline:3px solid #a25c2e; outline-offset:3px; }
+@media(max-width:450px) { .tetris-layout { gap:14px; }.tetris-side strong { font-size:1.2rem; }.tetris-side p { margin-bottom:10px; }.tetris-mascot svg { width:64px; } }

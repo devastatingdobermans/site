@@ -138,15 +138,16 @@
   pauseButton.addEventListener('click', pause);
   canvas.addEventListener('pointerdown', event => { event.preventDefault(); canvas.focus({preventScroll:true}); jump(); });
   document.addEventListener('keydown', event => {
-    if (document.getElementById('games').hidden || event.repeat ||
+    if (document.getElementById('games').hidden || document.getElementById('dash-game').hidden || event.repeat ||
         event.target.closest('button,a,summary,input,textarea')) return;
     if (['Space','ArrowUp'].includes(event.code)) { event.preventDefault(); jump(); }
     if (event.code === 'KeyP') { event.preventDefault(); pause(); }
   });
   function pauseWhenAway() {
-    if (mode === 'running' && (document.hidden || location.hash !== '#games')) pause();
+    if (mode === 'running' && (document.hidden || location.hash !== '#games' || document.getElementById('dash-game').hidden)) pause();
   }
   document.addEventListener('visibilitychange', pauseWhenAway);
   window.addEventListener('hashchange', pauseWhenAway);
+  window.addEventListener('gamechange', pauseWhenAway);
   controls(); draw(); requestAnimationFrame(frame);
 })();

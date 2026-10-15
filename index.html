@@ -139,6 +139,7 @@
 		.louis-photo { display:block; width:100%; max-width:100%; height:auto; margin:32px auto 0; border-radius:12px; }
 </style>
 	<link rel="stylesheet" href="games/runner.css">
+<link rel="stylesheet" href="games/tetris.css">
 </head>
 	<body>
 		<header class="site-header">
@@ -165,12 +166,27 @@
 			</section>
 			<section id="games" class="game-section" aria-labelledby="games-title" hidden>
 				<h1 id="games-title">Games</h1>
-				<div class="runner-heading"><div><p class="game-eyebrow">Run, Louie, run!</p><h2>Doberman Dash</h2></div><div class="scoreboard"><span>Score <strong id="run-score">0</strong></span><span>Best <strong id="run-best">0</strong></span></div></div>
+				<div class="game-picker" aria-label="Choose a game"><button type="button" data-game="dash" aria-pressed="true">Doberman Dash</button><button type="button" data-game="tetris" aria-pressed="false">Doberman Tetris</button></div><article id="dash-game">
+<div class="runner-heading"><div><p class="game-eyebrow">Run, Louie, run!</p><h2>Doberman Dash</h2></div><div class="scoreboard"><span>Score <strong id="run-score">0</strong></span><span>Best <strong id="run-best">0</strong></span></div></div>
 <div class="runner-field"><canvas id="runner" width="900" height="360" tabindex="0" aria-label="Doberman Dash. Jump over fences and flowerpots using Space, Arrow Up, or the Jump button.">Your browser needs canvas support to play Doberman Dash.</canvas></div>
 <p id="run-status" role="status">Ready to run? Help Louie jump over fences and flowerpots.</p>
 <div class="runner-controls"><button id="run-start" type="button">Start game</button><button id="run-jump" type="button" disabled>Jump</button><button id="run-pause" type="button" disabled>Pause</button></div>
 <p class="runner-help">Space / ↑ to jump · P to pause · Tap the game or Jump on your phone. The longer you run, the faster it gets!</p>
-<script src="games/runner.js" defer></script>
+</article>
+<article id="tetris-game" hidden>
+<div class="runner-heading"><div><p class="game-eyebrow">Stack. Fetch. Repeat.</p><h2>Doberman Tetris</h2></div></div>
+<div class="tetris-layout">
+<canvas id="tetris-board" width="300" height="600" tabindex="0" aria-label="Doberman Tetris board. Use arrow keys to move and rotate, Space to drop.">Canvas support is needed to play.</canvas>
+<div class="tetris-side"><div class="tetris-mascot" aria-hidden="true"><svg viewBox="0 0 120 120" width="100" height="100"><path fill="#30231e" d="M20 52 15 4 48 30 72 30 105 4 100 52 90 97 60 118 30 97Z"/><path fill="#ab683c" d="m15 4 12 40 15-9Zm90 0-12 40-15-9ZM32 67l16-5 12 23 12-23 16 5-8 30-20 16-20-16Z"/><path fill="#e5bd62" d="m29 48 19 4-4 7-14-3Zm62 0-19 4 4 7 14-3Z"/><path fill="#211914" d="m47 82 26 0-5 12H52Z"/></svg></div>
+<p>Score <strong id="tetris-score">0</strong></p><p>Best <strong id="tetris-best">0</strong></p><p>Lines <strong id="tetris-lines">0</strong></p><p>Level <strong id="tetris-level">1</strong></p>
+<p>Next piece</p><canvas id="tetris-next" width="120" height="120" aria-label="Next piece preview"></canvas>
+</div></div>
+<p id="tetris-status" role="status">Ready to stack? Complete rows to clear them.</p>
+<div class="runner-controls"><button id="tetris-start" type="button">Start Tetris</button><button id="tetris-pause" type="button" disabled>Pause</button></div>
+<div class="tetris-touch" aria-label="Tetris controls"><button type="button" data-tetris="left" aria-label="Move left">&#8592;</button><button type="button" data-tetris="rotate">Rotate</button><button type="button" data-tetris="right" aria-label="Move right">&#8594;</button><button type="button" data-tetris="down">Down</button><button type="button" data-tetris="drop">Drop</button></div>
+<p class="runner-help">Left / Right: move &middot; Up: rotate &middot; Down: soft drop &middot; Space: drop &middot; P: pause. Use the buttons on your phone.</p>
+</article>
+<script src="games/runner.js" defer></script><script src="games/tetris.js" defer></script>
 			</section>
 			<section id="why-i-hate-louis" class="placeholder" aria-labelledby="louis-title" hidden>
 				<h1 id="louis-title">Why I Hate Louis</h1>
